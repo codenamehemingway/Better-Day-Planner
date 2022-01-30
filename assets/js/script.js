@@ -20,3 +20,8 @@ for (i = 8; i < 18; i++) {
   entryCount++;
 }
 // save to storage function
+$("button").click(function createTasks() {
+  var task = $(this).siblings("textarea").val();
+  var timeBlock = $(this).siblings("textarea").attr("id");
+  localStorage.setItem(task, timeBlock);
+});
